@@ -1,36 +1,30 @@
 plugins {
-    id "dev.flutter.flutter-plugin-loader" version "1.0.0"
-    id "com.android.application" version "8.3.0" apply false
-    id "org.jetbrains.kotlin.android" version "1.9.22" apply false
+    id "com.android.application"
+    id "org.jetbrains.kotlin.android"
+    id "dev.flutter.flutter-gradle-plugin"
 }
 
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
+android {
+    namespace "com.smflasher.nata"  // <-- GANTI INI SESUAI PACKAGE KAMU DI MANIFEST
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.smflasher.nata" // <-- SAMA KAYAK DI ATAS
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
     }
 
-    dependencies {
-        classpath "com.android.tools.build:gradle:8.3.0"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22"
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+        }
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
+flutter {
+    source "../.."
 }
 
-rootProject.buildDir = "../build"
-subprojects {
-    project.buildDir = "${rootProject.buildDir}/${project.name}"
-}
-subprojects {
-    project.evaluationDependsOn(":app")
-}
-
-tasks.register("clean", Delete) {
-    delete rootProject.buildDir
-}
+dependencies {}
