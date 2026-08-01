@@ -1,4 +1,4 @@
-    name: smflasher_nota
+name: smflasher_nota
 description: Aplikasi Nota SMFLASHER
 publish_to: 'none'
 version: 1.0.0+1
