@@ -1,19 +1,25 @@
 plugins {
     id "com.android.application"
-    id "org.jetbrains.kotlin.android"
+    id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
 }
 
 android {
-    namespace "com.smflasher.nata"  // <-- GANTI INI SESUAI PACKAGE KAMU DI MANIFEST
-    compileSdk 34
+    namespace "com.example.nama_smflasher_kamu"  // GANTI SESUAI PACKAGE KAMU
+    compileSdkVersion flutter.compileSdkVersion
+    ndkVersion flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
     defaultConfig {
-        applicationId "com.smflasher.nata" // <-- SAMA KAYAK DI ATAS
-        minSdk 21
-        targetSdk 34
-        versionCode 1
-        versionName "1.0"
+        applicationId "com.example.nama_smflasher_kamu" // GANTI SESUAI PACKAGE KAMU
+        minSdkVersion flutter.minSdkVersion
+        targetSdkVersion flutter.targetSdkVersion
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
     }
 
     buildTypes {
@@ -24,7 +30,7 @@ android {
 }
 
 flutter {
-    source "../.."
+    source '../..'
 }
 
 dependencies {}
