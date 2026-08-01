@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace "com.example.nama_app"  // GANTI SESUAI PUNYAMU
+    namespace "com.example.smflasher_nota"  // GANTI SESUAI PUNYAMU
     compileSdkVersion 34
 
     defaultConfig {
-        applicationId "com.example.nama_app" // GANTI SESUAI PUNYAMU
+        applicationId "com.example.smflasher_nota" // GANTI SESUAI PUNYAMU
         minSdkVersion 21
         targetSdkVersion 34
         versionCode 1
