@@ -63,9 +63,9 @@ Jenis HP: ${hpJenisController.text}
 Kerusakan: ${kerusakanController.text}
 Biaya: Rp ${total.toString()}
 
-Terima kasih sudah servis di $namaToko
-$alamatToko
-WA: $noHpToko
+Terima kasih sudah servis di $syamflasher
+$dusun sorok rt01 rw02 desa darmacaang kec cikoneng kab ciamis
+WA: $085320690367
 """;
 
     await Share.shareFiles([imagePath.path], text: pesan);
